@@ -13,7 +13,7 @@ h1 {
   margin-bottom: 100px;
 }
 
-p {
+.subtitle {
   font-size: 24px;
 }
 
@@ -75,3 +75,6 @@ p {
 #favoritesMichis {
   margin-bottom: 200px;
 }
+
+/* .footer {
+} */

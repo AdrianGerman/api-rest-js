@@ -10,8 +10,10 @@
     <div>
       <h1>Random mixis images</h1>
 
+      <span id="error"></span>
+
       <section id="randomMichis">
-        <p>
+        <p class="subtitle">
           On this website you can get images of cats at random, for what?
           nothing
           <br />
@@ -38,7 +40,7 @@
         </div>
 
         <br />
-        <button onclick="reload()" class="reload">Reload</button>
+        <button onclick="loadRandomMichis()" class="reload">Reload</button>
       </section>
 
       <section id="favoritesMichis">
@@ -50,8 +52,12 @@
           <button class="reload">Sacar de los favoritos</button>
         </article>
       </section>
-
-      <script src="./main.js"></script>
     </div>
+
+    <section class="footer">
+      <p>Created by Adrián Germán</p>
+    </section>
+
+    <script src="./main.js"></script>
   </body>
 </html>
