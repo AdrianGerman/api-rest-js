@@ -4,22 +4,53 @@
     <link rel="stylesheet" href="./styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random cats</title>
+    <title>Random Mixi</title>
   </head>
   <body>
     <div>
-      <h1>Random cat images</h1>
-      <p>
-        On this website you can get images of cats at random, for what? nothing
-        <br />
-        special, but who doesn't like cats?
-      </p>
-      <img id="img1" alt="ramdom-cat" />
-      <img id="img2" alt="ramdom-cat" />
-      <img id="img3" alt="ramdom-cat" />
+      <h1>Random mixis images</h1>
 
-      <br />
-      <button onclick="reload()">Cats</button>
+      <section id="randomMichis">
+        <p>
+          On this website you can get images of cats at random, for what?
+          nothing
+          <br />
+          special, but who doesn't like cats?
+        </p>
+        <div class="cards">
+          <article>
+            <img id="img1" alt="ramdom-cat" />
+            <br />
+            <button class="favorites">Add to favorite</button>
+          </article>
+
+          <article>
+            <img id="img2" alt="ramdom-cat" />
+            <br />
+            <button class="favorites">Add to favorite</button>
+          </article>
+
+          <article>
+            <img id="img3" alt="ramdom-cat" />
+            <br />
+            <button class="favorites">Add to favorite</button>
+          </article>
+        </div>
+
+        <br />
+        <button onclick="reload()" class="reload">Reload</button>
+      </section>
+
+      <section id="favoritesMichis">
+        <h2>Michis favoritos</h2>
+
+        <article>
+          <img id="img1" alt="ramdom-cat" />
+          <br />
+          <button class="reload">Sacar de los favoritos</button>
+        </article>
+      </section>
+
       <script src="./main.js"></script>
     </div>
   </body>

@@ -17,14 +17,16 @@ p {
   font-size: 24px;
 }
 
-img {
+#img1,
+#img2,
+#img3 {
   width: 320px;
   height: 300px;
 }
 
-button {
+.reload {
   margin-top: 50px;
-  background-color: #008cba;
+  background-color: #9b0eb8;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -36,7 +38,40 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0288b4ec;
+.reload:hover,
+.favorites:hover {
+  background-color: #480854;
   color: rgb(202, 200, 200);
+}
+
+.cards {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.cards article {
+  margin-left: 20px;
+  background-color: rgb(50, 48, 68);
+  border-radius: 10px;
+  padding-bottom: 12px;
+}
+
+.favorites {
+  margin-top: 20px;
+  background-color: #9b0eb8;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#favoritesMichis {
+  margin-bottom: 200px;
 }
