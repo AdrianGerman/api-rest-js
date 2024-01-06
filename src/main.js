@@ -4,6 +4,9 @@ const API_URL_RANDOM =
 const API_URL_FAVORITES =
   "https://api.thecatapi.com/v1/favourites?api_key=live_5UT9xBpqUI9PwZ1q3zzqzQuVXSSPJtPsoTZWgncgiAM1GpeUDKOZSFG8qRnWJHhI";
 
+const API_URL_FAVOTITES_DELETE = (id) =>
+  `https://api.thecatapi.com/v1/favourites/${id}?api_key=live_5UT9xBpqUI9PwZ1q3zzqzQuVXSSPJtPsoTZWgncgiAM1GpeUDKOZSFG8qRnWJHhI`;
+
 const spanError = document.getElementById("error");
 
 async function loadRandomMichis() {
@@ -41,18 +44,24 @@ async function loadFavouritesMichis() {
   if (res.status !== 200) {
     spanError.innerHTML = "Hubo un error: " + res.status + data.message;
   } else {
+    const section = document.getElementById("favoriteMichis");
+    section.innerHTML = "";
+
+    const h2 = document.createElement("h2");
+    const h2Text = document.createTextNode("Michis favoritos");
+    h2.appendChild(h2Text);
+    section.appendChild(h2);
+
     data.forEach((michi) => {
-      const section = document.getElementById("favoriteMichis");
       const article = document.createElement("article");
       const img = document.createElement("img");
-      const btn = document.createElement("btn");
-      const btnText = document.createTextNode(
-        "Sacar al michi de los favoritos"
-      );
+      const btn = document.createElement("button");
+      const btnText = document.createTextNode("Sacar de favoritos");
 
       img.src = michi.image.url;
       img.width = 150;
       btn.appendChild(btnText);
+      btn.onclick = () => deleteFavouriteMichi(michi.id);
       article.appendChild(img);
       article.appendChild(btn);
       section.appendChild(article);
@@ -77,6 +86,23 @@ async function saveFavouriteMichis(id) {
 
   if (res.status !== 200) {
     spanError.innerHTML = "Hubo un error: " + res.status + data.message;
+  } else {
+    console.log("Michi guardado en favoritos");
+    loadFavouritesMichis();
+  }
+}
+
+async function deleteFavouriteMichi(id) {
+  const res = await fetch(API_URL_FAVOTITES_DELETE(id), {
+    method: "DELETE",
+  });
+  const data = await res.json();
+
+  if (res.status !== 200) {
+    spanError.innerHTML = "Hubo un error: " + res.status + data.message;
+  } else {
+    console.log("Michi eliminado de favoritos");
+    loadFavouritesMichis();
   }
 }
 
