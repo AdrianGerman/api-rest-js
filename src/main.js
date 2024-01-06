@@ -115,5 +115,33 @@ async function deleteFavouriteMichi(id) {
   }
 }
 
+async function uploadMichiPhoto() {
+  const form = document.getElementById("uploadingForm");
+  const formData = new FormData(form);
+
+  console.log(formData.get("file"));
+
+  const res = await fetch(API_URL_UPLOAD, {
+    method: "POST",
+    headers: {
+      // 'Content-Type': 'multipart/form-data',
+      "X-API-KEY":
+        "live_5UT9xBpqUI9PwZ1q3zzqzQuVXSSPJtPsoTZWgncgiAM1GpeUDKOZSFG8qRnWJHhI",
+    },
+    body: formData,
+  });
+  const data = await res.json();
+
+  if (res.status !== 201) {
+    spanError.innerHTML = "Hubo un error: " + res.status + data.message;
+    console.log({ data });
+  } else {
+    console.log("Foto de michi subida :)");
+    console.log({ data });
+    console.log(data.url);
+    saveFavouriteMichis(data.id);
+  }
+}
+
 loadRandomMichis();
 loadFavouritesMichis();
