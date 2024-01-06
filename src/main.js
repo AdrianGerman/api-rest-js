@@ -71,10 +71,14 @@ async function loadFavouritesMichis() {
       const btn = document.createElement("button");
       const btnText = document.createTextNode("Sacar de favoritos");
 
-      img.src = michi.image.url;
-      img.width = 150;
       btn.appendChild(btnText);
       btn.onclick = () => deleteFavouriteMichi(michi.id);
+      btn.className = "favorites1";
+      btn.classList.add("favorites1");
+
+      img.src = michi.image.url;
+      img.id = "img-r";
+
       article.appendChild(img);
       article.appendChild(btn);
       section.appendChild(article);
