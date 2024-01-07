@@ -102,7 +102,6 @@ h1 {
   margin-bottom: 100px;
 }
 
-/* Estilo para el input file */
 #file {
   justify-content: center;
   align-items: center;
@@ -115,7 +114,6 @@ h1 {
   cursor: pointer;
 }
 
-/* Estilo para el botón de carga personalizado */
 .button-upload {
   margin-top: 20px;
   background-color: #0799b6;
@@ -132,14 +130,12 @@ h1 {
   font-family: "Salsa", cursive;
 }
 
-/* Estilo para el contenedor del nombre de archivo seleccionado */
 #file-label {
   display: inline-block;
   margin-top: 10px;
   font-weight: bold;
 }
 
-/* Estilo para resaltar el nombre del archivo cuando está seleccionado */
 #file:hover + #file-label {
   color: #4caf50;
 }
@@ -148,5 +144,7 @@ h1 {
   color: #4caf50;
 }
 
-/* .footer {
-} */
+.footer {
+  background-color: rgb(50, 48, 68);
+  padding: 20px;
+}
