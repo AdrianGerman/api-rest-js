@@ -60,7 +60,11 @@ async function loadFavouritesMichis() {
     const section = document.getElementById("favoriteMichis");
     section.innerHTML = "";
 
+    const cardsContainer = document.createElement("div");
+    cardsContainer.className = "cards";
+
     const h2 = document.createElement("h2");
+    h2.className = "title-subitles";
     const h2Text = document.createTextNode("Michis favoritos");
     h2.appendChild(h2Text);
     section.appendChild(h2);
@@ -73,16 +77,17 @@ async function loadFavouritesMichis() {
 
       btn.appendChild(btnText);
       btn.onclick = () => deleteFavouriteMichi(michi.id);
-      btn.className = "favorites1";
-      btn.classList.add("favorites1");
+      btn.className = "favorites";
+      btn.classList.add("favorites");
 
       img.src = michi.image.url;
       img.id = "img-r";
 
       article.appendChild(img);
       article.appendChild(btn);
-      section.appendChild(article);
+      cardsContainer.appendChild(article);
     });
+    section.appendChild(cardsContainer);
   }
 }
 
