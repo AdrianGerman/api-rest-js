@@ -145,6 +145,9 @@ h1 {
 }
 
 .footer {
+  margin-top: 500px;
   background-color: rgb(50, 48, 68);
   padding: 20px;
+  position: absolute;
+  width: 100%;
 }
