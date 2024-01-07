@@ -65,7 +65,7 @@ async function loadFavouritesMichis() {
 
     const h2 = document.createElement("h2");
     h2.className = "title-subitles";
-    const h2Text = document.createTextNode("Michis favoritos");
+    const h2Text = document.createTextNode("Favorite michis");
     h2.appendChild(h2Text);
     section.appendChild(h2);
 
@@ -73,7 +73,7 @@ async function loadFavouritesMichis() {
       const article = document.createElement("article");
       const img = document.createElement("img");
       const btn = document.createElement("button");
-      const btnText = document.createTextNode("Sacar de favoritos");
+      const btnText = document.createTextNode("Remove from favorites");
 
       btn.appendChild(btnText);
       btn.onclick = () => deleteFavouriteMichi(michi.id);
