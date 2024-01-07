@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Salsa&family=Ubuntu:wght@300;500;700&display=swap");
+
 body {
   margin: 0;
   justify-content: center;
@@ -5,6 +7,8 @@ body {
   align-items: center;
   background-color: rgb(38, 36, 52);
   color: #f2e6cf;
+  font-family: "Salsa", cursive;
+  font-family: "Ubuntu", sans-serif;
 }
 
 h1 {
@@ -38,6 +42,7 @@ h1 {
   font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
+  font-family: "Salsa", cursive;
 }
 
 .reload:hover,
@@ -73,6 +78,7 @@ h1 {
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Salsa", cursive;
 }
 
 .favoritesMichis {
@@ -94,6 +100,52 @@ h1 {
   font-size: 30px;
   margin-top: 200px;
   margin-bottom: 100px;
+}
+
+/* Estilo para el input file */
+#file {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  background-color: #0799b6;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilo para el botón de carga personalizado */
+.button-upload {
+  margin-top: 20px;
+  background-color: #0799b6;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Salsa", cursive;
+}
+
+/* Estilo para el contenedor del nombre de archivo seleccionado */
+#file-label {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Estilo para resaltar el nombre del archivo cuando está seleccionado */
+#file:hover + #file-label {
+  color: #4caf50;
+}
+
+#file:active + #file-label {
+  color: #4caf50;
 }
 
 /* .footer {
