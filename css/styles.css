@@ -9,6 +9,7 @@ body {
   color: #f2e6cf;
   font-family: "Salsa", cursive;
   font-family: "Ubuntu", sans-serif;
+  overflow-x: hidden;
 }
 
 .logo {
